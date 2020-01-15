@@ -2,6 +2,7 @@
 
 ### Next version - unreleased:
 * removed CentOS support
+* removed Xfce support
 
 ### Version 1.4.0:
 * added Github issue and pull request templates

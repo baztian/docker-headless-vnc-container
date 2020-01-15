@@ -115,4 +115,4 @@ parameters:
 - description: Headless vnc image
   name: IMAGE
   required: true
-  value: consol/ubuntu-xfce-vnc:dev
+  value: consol/ubuntu-icewm-vnc:dev

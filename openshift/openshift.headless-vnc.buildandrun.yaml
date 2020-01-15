@@ -157,9 +157,9 @@ parameters:
 - description: Git branch/tag reference
   name: SOURCE_REPOSITORY_REF
   value: "master"
-- description: Name of the Dockerfile for example Dockerfile.ubuntu.xfce.vnc or Dockerfile.ubuntu.icewm.vnc
+- description: Name of the Dockerfile
   name: SOURCE_DOCKERFILE
-  value: Dockerfile.ubuntu.xfce.vnc
+  value: Dockerfile
 - description: GitHub trigger secret
   from: '[a-zA-Z0-9]{8}'
   generate: expression

@@ -1,6 +1,6 @@
 # OpenShift usage of "headless" VNC Docker images
 
-The following content uses as example the image `consol/ubuntu-xfce-vnc` of the Dockerfile `Dockerfile.ubuntu.xfce.vnc`.
+The following content uses as example the image `consol/ubuntu-icewm-vnc`.
 
 ## Run the image from Dockerhub
                                 
@@ -9,7 +9,7 @@ The following content uses as example the image `consol/ubuntu-xfce-vnc` of the 
 
 As soon as you are logged in and selected your oc project, you can simple run the image by using the configuration `openshift.headless-vnc.run.yaml`:
 
-    oc process -f openshift.headless-vnc.run.yaml -v APPLICATION_NAME=myrunonlypod IMAGE=consol/ubuntu-xfce-vnc | oc create -f -
+    oc process -f openshift.headless-vnc.run.yaml -v APPLICATION_NAME=myrunonlypod IMAGE=consol/ubuntu-icewm-vnc | oc create -f -
     # service "my-run-only-pod" created
     # route "my-run-only-pod" created
     # imagestream "my-run-only-pod" created
@@ -33,16 +33,16 @@ Over the URL you can look and control the fresh deployed container via the web-v
 
 If you want to build the image in your own infrastructure just use the configuration `openshift.headless-vnc.buildandrun.yaml`:
 
-    oc process -f openshift.headless-vnc.buildandrun.yaml -v APPLICATION_NAME=my-ubuntu-xfce-image,SOURCE_DOCKERFILE=Dockerfile.ubuntu.xfce,SOURCE_REPOSITORY_REF=master | oc create -f -
-    # service "my-ubuntu-xfce-image" created
-    # route "my-ubuntu-xfce-image" created
-    # imagestream "my-ubuntu-xfce-image" created
-    # buildconfig "my-ubuntu-xfce-image" created
-    # deploymentconfig "my-ubuntu-xfce-image" created
+    oc process -f openshift.headless-vnc.buildandrun.yaml -v APPLICATION_NAME=my-ubuntu-icewm-image,SOURCE_DOCKERFILE=Dockerfile,SOURCE_REPOSITORY_REF=master | oc create -f -
+    # service "my-ubuntu-icewm-image" created
+    # route "my-ubuntu-icewm-image" created
+    # imagestream "my-ubuntu-icewm-image" created
+    # buildconfig "my-ubuntu-icewm-image" created
+    # deploymentconfig "my-ubuntu-icewm-image" created
 
 Now a fresh image build will be triggerd, see:
 
-[https://__YOUR-OS-MANAGEMENT-URL__/console/project/my-project/browse/builds/my-ubuntu-xfce-image/my-ubuntu-xfce-image-1?tab=logs]()
+[https://__YOUR-OS-MANAGEMENT-URL__/console/project/my-project/browse/builds/my-ubuntu-icewm-image/my-ubuntu-icewm-image-1?tab=logs]()
 
 ![openshift headless vnc docker image build](../.pics/os_build_and_run.png)
 
@@ -54,7 +54,7 @@ After the image is successfully built, openshift will autmaticly will deploy it 
 
 After the deployment, you you can look and control the fresh deployed container via the web-vnc interface:
  
-[http://my-ubuntu-xfce-image.__YOUR-OS-URL__/?password=vncpassword]() 
+[http://my-ubuntu-icewm-image.__YOUR-OS-URL__/?password=vncpassword]() 
  
 ![openshift container via webvnc](../.pics/os_container_webvnc.p
 

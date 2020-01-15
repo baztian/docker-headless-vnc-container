@@ -9,7 +9,6 @@ USAGE:
 docker run -it -p 6901:6901 -p 5901:5901 consol/<image>:<tag> <option>
 
 IMAGES:
-consol/ubuntu-xfce-vnc
 consol/ubuntu-icewm-vnc
 
 TAGS:
@@ -19,9 +18,9 @@ dev     current development version of branch 'dev'
 OPTIONS:
 -w, --wait      (default) keeps the UI and the vncserver up until SIGINT or SIGTERM will received
 -s, --skip      skip the vnc startup and just execute the assigned command.
-                example: docker run consol/ubuntu-xfce-vnc --skip bash
+                example: docker run consol/ubuntu-icewm-vnc --skip bash
 -d, --debug     enables more detailed startup output
-                e.g. 'docker run consol/ubuntu-xfce-vnc --debug bash'
+                e.g. 'docker run consol/ubuntu-icewm-vnc --debug bash'
 -h, --help      print out this help
 
 Fore more information see: https://github.com/ConSol/docker-headless-vnc-container
