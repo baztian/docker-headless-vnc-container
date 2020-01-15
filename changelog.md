@@ -1,5 +1,8 @@
 ## Changelog of the Docker headless VNC images
 
+### Next version - unreleased:
+* removed CentOS support
+
 ### Version 1.4.0:
 * added Github issue and pull request templates
 * added install script for custom fonts ([#83](https://github.com/ConSol/docker-headless-vnc-container/issues/83)))

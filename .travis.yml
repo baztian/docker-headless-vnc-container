@@ -6,19 +6,10 @@ services:
 language: generic
 
 env:
-- DISTRI=ubuntu DESKTOP=xfce
-- DISTRI=ubuntu DESKTOP=icewm
-- DISTRI=centos DESKTOP=xfce
-- DISTRI=centos DESKTOP=icewm
+- DESKTOP=xfce
+- DESKTOP=icewm
 
 script:
-  - docker build -t local/${DISTRI}-${DESKTOP}-vnc -f ./Dockerfile.${DISTRI}.${DESKTOP}.vnc .
+  - docker build -t local/ubuntu-${DESKTOP}-vnc -f ./Dockerfile.ubuntu.${DESKTOP}.vnc .
 after_success:
-  - bash .build/trigger_dockerhub.sh ${DISTRI}-${DESKTOP}-vnc
-
-## use standard notification to committer
-#notifications:
-#    recipients:
-#      - "testautomatisierung@consol.de"
-#    on_success: change # default: change
-#    on_failure: always # default: always
+  - bash .build/trigger_dockerhub.sh ubuntu-${DESKTOP}-vnc

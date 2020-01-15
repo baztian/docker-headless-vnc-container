@@ -157,7 +157,7 @@ parameters:
 - description: Git branch/tag reference
   name: SOURCE_REPOSITORY_REF
   value: "master"
-- description: Name of the Dockerfile for example Dockerfile.ubuntu.xfce.vnc, Dockerfile.centos.icewm.vnc, Dockerfile.ubuntu.icewm.vnc or Dockerfile.centos.xfce.vnc
+- description: Name of the Dockerfile for example Dockerfile.ubuntu.xfce.vnc or Dockerfile.ubuntu.icewm.vnc
   name: SOURCE_DOCKERFILE
   value: Dockerfile.ubuntu.xfce.vnc
 - description: GitHub trigger secret
