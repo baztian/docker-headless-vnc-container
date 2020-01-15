@@ -1,8 +1,8 @@
 # Kubernetes usage of "headless" VNC Docker images
 
-The following content uses as example the image `consol/centos-xfce-vnc` of the Dockerfile [`Dockerfile.centos.xfce.vnc`](../Dockerfile.centos.xfce.vnc).
+The following content uses as example the image `consol/ubuntu-xfce-vnc` of the Dockerfile [`Dockerfile.ubuntu.xfce.vnc`](../Dockerfile.ubuntu.xfce.vnc).
 
-## Deploy one pod of `centos-xfce-vnc` image and expose a service
+## Deploy one pod of `ubuntu-xfce-vnc` image and expose a service
  
 On an already logged in Kubernetes cluster just use the predefined deployment with service config [`kubernetes.headless-vnc.example.deployment.yaml`](kubernetes.headless-vnc.example.deployment.yaml): 
 

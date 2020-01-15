@@ -17,17 +17,9 @@ Each Docker image is installed with the following components:
 `master`:  [![Build Status MASTER](https://travis-ci.org/ConSol/docker-headless-vnc-container.svg?branch=master)](https://travis-ci.org/ConSol/docker-headless-vnc-container) `dev`: [![Build Status DEV](https://travis-ci.org/ConSol/docker-headless-vnc-container.svg?branch=dev)](https://travis-ci.org/ConSol/docker-headless-vnc-container)
 
 ## Current provided OS & UI sessions:
-* `consol/centos-xfce-vnc`: __Centos7 with `Xfce4` UI session__ 
-
-  [![](https://images.microbadger.com/badges/version/consol/centos-xfce-vnc.svg)](https://hub.docker.com/r/consol/centos-xfce-vnc/) [![](https://images.microbadger.com/badges/image/consol/centos-xfce-vnc.svg)](http://microbadger.com/images/consol/centos-xfce-vnc)
-
 * `consol/ubuntu-xfce-vnc`: __Ubuntu with `Xfce4` UI session__
 
   [![](https://images.microbadger.com/badges/version/consol/ubuntu-xfce-vnc.svg)](https://hub.docker.com/r/consol/ubuntu-xfce-vnc/) [![](https://images.microbadger.com/badges/image/consol/ubuntu-xfce-vnc.svg)](http://microbadger.com/images/consol/ubuntu-xfce-vnc)
-
-* `consol/centos-icewm-vnc`: __Centos7 with `IceWM` UI session__ 
-
-  [![](https://images.microbadger.com/badges/version/consol/centos-icewm-vnc.svg)](https://hub.docker.com/r/consol/centos-icewm-vnc/) [![](https://images.microbadger.com/badges/image/consol/centos-icewm-vnc.svg)](http://microbadger.com/images/consol/centos-icewm-vnc)
 
 * `consol/ubuntu-icewm-vnc`: __Ubuntu with `IceWM` UI session__
 
@@ -41,27 +33,27 @@ It's also possible to run the images in container orchestration platforms like [
 * [OpenShift usage of "headless" VNC Docker images](./openshift/README.md) 
 
 ## Usage
-Usage is **similar** for all provided images, e.g. for `consol/centos-xfce-vnc`:
+Usage is **similar** for all provided images, e.g. for `consol/ubuntu-xfce-vnc`:
 
 - Print out help page:
 
-      docker run consol/centos-xfce-vnc --help
+      docker run consol/ubuntu-xfce-vnc --help
 
 - Run command with mapping to local port `5901` (vnc protocol) and `6901` (vnc web access):
 
-      docker run -d -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc
+      docker run -d -p 5901:5901 -p 6901:6901 consol/ubuntu-xfce-vnc
   
 - Change the default user and group within a container to your own with adding `--user $(id -u):$(id -g)`:
 
-      docker run -d -p 5901:5901 -p 6901:6901 --user $(id -u):$(id -g) consol/centos-xfce-vnc
+      docker run -d -p 5901:5901 -p 6901:6901 --user $(id -u):$(id -g) consol/ubuntu-xfce-vnc
 
 - If you want to get into the container use interactive mode `-it` and `bash`
       
-      docker run -it -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc bash
+      docker run -it -p 5901:5901 -p 6901:6901 consol/ubuntu-xfce-vnc bash
 
 - Build an image from scratch:
 
-      docker build -t consol/centos-xfce-vnc centos-xfce-vnc
+      docker build -t consol/ubuntu-xfce-vnc ubuntu-xfce-vnc
 
 # Connect & Control
 If the container is started like mentioned above, connect via one of these options:
@@ -78,7 +70,7 @@ Since version `1.1.0` all images run as non-root user per default, so if you wan
 
 ```bash
 ## Custom Dockerfile
-FROM consol/centos-xfce-vnc
+FROM consol/ubuntu-xfce-vnc
 ENV REFRESHED_AT 2018-03-18
 
 # Switch to root user to install additional software
@@ -99,12 +91,12 @@ Per default, since version `1.3.0` all container processes will be executed with
 #### 2.1) Using root (user id `0`)
 Add the `--user` flag to your docker run command:
 
-    docker run -it --user 0 -p 6911:6901 consol/centos-xfce-vnc
+    docker run -it --user 0 -p 6911:6901 consol/ubuntu-xfce-vnc
 
 #### 2.2) Using user and group id of host system
 Add the `--user` flag to your docker run command:
 
-    docker run -it -p 6911:6901 --user $(id -u):$(id -g) consol/centos-xfce-vnc
+    docker run -it -p 6911:6901 --user $(id -u):$(id -g) consol/ubuntu-xfce-vnc
 
 ### 3) Override VNC environment variables
 The following VNC environment variables can be overwritten at the `docker run` phase to customize your desktop environment inside the container:
@@ -116,25 +108,25 @@ The following VNC environment variables can be overwritten at the `docker run` p
 Simply overwrite the value of the environment variable `VNC_PW`. For example in
 the docker run command:
 
-    docker run -it -p 5901:5901 -p 6901:6901 -e VNC_PW=my-pw consol/centos-xfce-vnc
+    docker run -it -p 5901:5901 -p 6901:6901 -e VNC_PW=my-pw consol/ubuntu-xfce-vnc
 
 #### 3.2) Example: Override the VNC resolution
 Simply overwrite the value of the environment variable `VNC_RESOLUTION`. For example in
 the docker run command:
 
-    docker run -it -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=800x600 consol/centos-xfce-vnc
+    docker run -it -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=800x600 consol/ubuntu-xfce-vnc
     
 ### 4) View only VNC
 Since version `1.2.0` it's possible to prevent unwanted control via VNC. Therefore you can set the environment variable `VNC_VIEW_ONLY=true`. If set, the startup script will create a random password for the control connection and use the value of `VNC_PW` for view only connection over the VNC connection.
 
-     docker run -it -p 5901:5901 -p 6901:6901 -e VNC_VIEW_ONLY=true consol/centos-xfce-vnc
+     docker run -it -p 5901:5901 -p 6901:6901 -e VNC_VIEW_ONLY=true consol/ubuntu-xfce-vnc
 
 ### 5) Known Issues
 
 #### 5.1) Chromium crashes with high VNC_RESOLUTION ([#53](https://github.com/ConSol/docker-headless-vnc-container/issues/53))
 If you open some graphic/work intensive websites in the Docker container (especially with high resolutions e.g. `1920x1080`) it can happen that Chromium crashes without any specific reason. The problem there is the too small `/dev/shm` size in the container. Currently there is no other way, as define this size on startup via `--shm-size` option, see [#53 - Solution](https://github.com/ConSol/docker-headless-vnc-container/issues/53#issuecomment-347265977):
 
-    docker run --shm-size=256m -it -p 6901:6901 -e VNC_RESOLUTION=1920x1080 consol/centos-xfce-vnc chromium-browser http://map.norsecorp.com/
+    docker run --shm-size=256m -it -p 6901:6901 -e VNC_RESOLUTION=1920x1080 consol/ubuntu-xfce-vnc chromium-browser http://map.norsecorp.com/
   
 Thx @raghavkarol for the hint! 
 
