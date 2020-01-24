@@ -1,6 +1,7 @@
 ## Changelog of the Docker headless VNC images
 
 * Next version - unreleased
+* 2.0.1 - 2020-01-24
 * 2.0.0 - 2020-01-15
   * removed CentOS support
   * removed Xfce support
