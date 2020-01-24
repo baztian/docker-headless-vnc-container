@@ -2,10 +2,19 @@
 
 * Next version - unreleased
 * 2.4.0 - 2020-01-24
+  * Upgrade novnc
+
 * 2.3.0 - 2020-01-24
+  * TigerVNC
+
 * 2.2.0 - 2020-01-24
+  * Upgrade Firefox
+
 * 2.1.0 - 2020-01-24
+  * Upgrade to Ubuntu 18.04
 * 2.0.1 - 2020-01-24
+  * fixed icewm startup
+
 * 2.0.0 - 2020-01-15
   * removed CentOS support
   * removed Xfce support
