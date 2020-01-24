@@ -38,7 +38,7 @@ function instFF() {
     exit -1
 }
 
-instFF '45.9.0esr' '/usr/lib/firefox'
+instFF '68.4.2esr' '/usr/lib/firefox'
 
 #apt-get update
 #apt-get install -y firefox
