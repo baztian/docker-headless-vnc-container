@@ -1,6 +1,6 @@
 # Kubernetes usage of "headless" VNC Docker images
 
-The following content uses as example the image `consol/ubuntu-icewm-vnc` of the Dockerfile .
+The following content uses as example the image `baztian/ubuntu-icewm-vnc` of the Dockerfile .
 
 ## Deploy one pod of `ubuntu-icewm-vnc` image and expose a service
  

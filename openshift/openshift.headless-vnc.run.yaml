@@ -6,7 +6,7 @@ metadata:
   annotations:
     description: Headless VNC (only run)
     iconClass: icon-beaker
-    tags: headless,vnc,consol
+    tags: headless,vnc
     version: 1.0.3
   creationTimestamp: null
   name: headless-vnc-run
@@ -115,4 +115,4 @@ parameters:
 - description: Headless vnc image
   name: IMAGE
   required: true
-  value: consol/ubuntu-icewm-vnc:dev
+  value: baztian/ubuntu-icewm-vnc:dev
