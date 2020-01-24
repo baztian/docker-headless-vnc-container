@@ -1,6 +1,7 @@
 ## Changelog of the Docker headless VNC images
 
 * Next version - unreleased
+* 2.4.0 - 2020-01-24
 * 2.3.0 - 2020-01-24
 * 2.2.0 - 2020-01-24
 * 2.1.0 - 2020-01-24
