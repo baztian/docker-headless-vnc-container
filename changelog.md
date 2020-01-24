@@ -19,7 +19,7 @@
   * removed CentOS support
   * removed Xfce support
   
-* Version 1.4.0:
+* 1.4.0 - 2018-10-29
   * added Github issue and pull request templates
   * added install script for custom fonts ([#83](https://github.com/ConSol/docker-headless-vnc-container/issues/83)))
   * fixed problem that VNC password was not properly set after doing a Docker commit ([#88](https://github.com/ConSol/  docker-headless-vnc-container/issues/88))
@@ -27,7 +27,7 @@
   * added 'how-to-release' info ([#75](https://github.com/ConSol/docker-headless-vnc-container/issues/75))
   * added Travis build ([#74](https://github.com/ConSol/docker-headless-vnc-container/issues/74))
   
-* Version 1.3.0:
+* 1.3.0 - 2018-03-27
   * change default USER to `1000` ([#61](https://github.com/ConSol/docker-headless-vnc-container/issues/61))
   * refactor vnc startup script ([#73](https://github.com/ConSol/docker-headless-vnc-container/issues/73))
     * add help option `--help`
@@ -39,8 +39,7 @@
   * add example for [Kubernetes usage](./kubernetes/README.md) ([#71](https://github.com/ConSol/  docker-headless-vnc-container/issues/71)) 
   * remove verbose output by default from `set_user_permissions.sh` script
    
-* Version 1.2.3:
-  
+* 1.2.3 - 2017-12-15
   * start no_vnc with localhost instead of VNC_IP to ensure startup on docker bridge mode ([#41](https://github.com/  ConSol/docker-headless-vnc-container/issue/41)) 
   * add xfce4-terminal to enable copy and paste ([#55](https://github.com/ConSol/docker-headless-vnc-container/issue/  55))
   * add save mode for tag_image.sh script 
@@ -48,18 +47,18 @@
   * use correct python-numpy packages 
   * add "Known Issues" documentation: [Chromium crashes with high VNC_RESOLUTION](https://github.com/ConSol/  docker-headless-vnc-container#51-chromium-crashes-with-high-vnc_resolution-53)
   
-* Version 1.2.2
+* 1.2.2 - 2017-11-20
   * disable automatic firefox updates ([#45](https://github.com/ConSol/docker-headless-vnc-container/issue/45))
   * fix wrong env usage of `$HOME` ([#47](https://github.com/ConSol/docker-headless-vnc-container/issue/47))
   * fix hanging vnc handshake if container is offline ([#50](https://github.com/ConSol/docker-headless-vnc-container/  issue/50))
   * Merge pull request from:
       * [dmhumph](https://github.com/dmhumph): Update OpenShift instructions for OCP 3.5 or greater ([#44](https://  github.com/ConSol/docker-headless-vnc-container/issue/44)) 
   
-* Version 1.2.1
+* 1.2.1 - 2017-09-27
   * Centos7: use temporally epel-testing repo to fix chrome error `libpng warning: Application built with   libpng-1.6.22 but running with 1.5.13` in version `60.0.3112.113-2.el7`
   * Fix broken `docker stop/start` ([#40](https://github.com/ConSol/docker-headless-vnc-container/issues/40))
   
-* Version 1.2.0
+* 1.2.0 - 2017-09-18
   * Use fixed firefox version `45.9.0esr` ([#39](https://github.com/ConSol/docker-headless-vnc-container/issues/39),   [#20](https://github.com/ConSol/docker-headless-vnc-container/issues/20), [#16](https://github.com/ConSol/  docker-headless-vnc-container/issues/16)) 
     * fix memory consumption problems in comparison to current firefox 55
     * tested on long term container issues without crashes 
@@ -71,8 +70,7 @@
   * Add chromium flag `--disable-gpu` to work for current chromium ([#36](https://github.com/ConSol/  docker-headless-vnc-container/issues/36)) 
   * Add `TERM=xterm` environment var ([#37](https://github.com/ConSol/docker-headless-vnc-container/issues/37))  
   
-* Version 1.1.0
-  
+* 1.1.0 - 2017-03-18
   * Add OpenShift support ([#3](https://github.com/ConSol/docker-headless-vnc-container/issues/3))
      * Support for start container process as non-root in usermode ([#7](https://github.com/ConSol/  docker-headless-vnc-container/issues/7))
      * Add Labels for OpenShift
@@ -84,4 +82,3 @@
   * Remove not needed Screensaver pacakges ([#11](https://github.com/ConSol/docker-headless-vnc-container/issues/11))          
   * Use Firefox 45 as fixed browser as long current firefox crashes ([#16](https://github.com/ConSol/  docker-headless-vnc-container/issues/16))
   * Fix issue be starting of reattached containers on `docker start` ([#15](https://github.com/ConSol/  docker-headless-vnc-container/issues/15))
-  
