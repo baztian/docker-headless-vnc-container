@@ -53,6 +53,7 @@ RUN $INST_SCRIPTS/chrome.sh
 
 ### Install window manager UI
 RUN $INST_SCRIPTS/icewm_ui.sh
+ADD ./src/icewm/ $HOME/
 
 ### configure startup
 RUN $INST_SCRIPTS/libnss_wrapper.sh
