@@ -1,6 +1,7 @@
 ## Changelog of the Docker headless VNC images
 
 * Next version - unreleased
+* 2.4.1 - 2020-01-27
 * 2.4.0 - 2020-01-24
   * Upgrade novnc
 
