@@ -7,6 +7,9 @@ function disableUpdate(){
     ff_def="$1/browser/defaults/profile"
     mkdir -p $ff_def
     cat > $ff_def/user.js <<EOF_FF 
+user_pref("browser.startup.homepage", "about:blank");
+user_pref("datareporting.policy.firstRunURL", "");
+user_pref("app.normandy.firstRun", false);
 user_pref("app.update.auto", false);
 user_pref("app.update.enabled", false);
 user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1182011519);
