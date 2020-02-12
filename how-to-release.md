@@ -17,5 +17,5 @@
 * Merge `dev` branch to `master`
 
 * Create a release on [github.com/ConSol/docker-headless-vnc-container/releases/new](https://github.com/ConSol/docker-headless-vnc-container/releases/new)
-* bumpversion --tag-name {new_version} major|minor|patch
+* bumpversion major|minor|patch
 * Write a blog post for [labs.consol.de](https://labs.consol.de/)
