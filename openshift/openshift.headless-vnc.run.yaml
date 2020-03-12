@@ -115,4 +115,4 @@ parameters:
 - description: Headless vnc image
   name: IMAGE
   required: true
-  value: baztian/ubuntu-icewm-vnc:dev
+  value: baztian/headless-vnc-container:dev

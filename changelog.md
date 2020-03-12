@@ -1,8 +1,11 @@
 ## Changelog of the Docker headless VNC images
 
 * Next version - unreleased
+  * Fix documentation
+
 * 2.4.3 - 2020-03-12
   * Fix wrong chromium sandobx parameter in all relevant places
+
 * 2.4.2 - 2020-01-27
   * Fix wrong chromium sandobx parameter
 

@@ -9,7 +9,7 @@ USAGE:
 docker run -it -p 6901:6901 -p 5901:5901 baztian/<image>:<tag> <option>
 
 IMAGES:
-baztian/ubuntu-icewm-vnc
+baztian/headless-vnc-container
 
 TAGS:
 latest  stable version of branch 'master'
@@ -18,9 +18,9 @@ dev     current development version of branch 'dev'
 OPTIONS:
 -w, --wait      (default) keeps the UI and the vncserver up until SIGINT or SIGTERM will received
 -s, --skip      skip the vnc startup and just execute the assigned command.
-                example: docker run baztian/ubuntu-icewm-vnc --skip bash
+                example: docker run baztian/headless-vnc-container --skip bash
 -d, --debug     enables more detailed startup output
-                e.g. 'docker run baztian/ubuntu-icewm-vnc --debug bash'
+                e.g. 'docker run baztian/headless-vnc-container --debug bash'
 -h, --help      print out this help
 
 Fore more information see: https://github.com/baztian/docker-headless-vnc-container

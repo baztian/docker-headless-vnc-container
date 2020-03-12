@@ -1,8 +1,8 @@
 # Kubernetes usage of "headless" VNC Docker images
 
-The following content uses as example the image `baztian/ubuntu-icewm-vnc` of the Dockerfile .
+The following content uses as example the image `baztian/headless-vnc-container` of the Dockerfile .
 
-## Deploy one pod of `ubuntu-icewm-vnc` image and expose a service
+## Deploy one pod of `headless-vnc-container` image and expose a service
  
 On an already logged in Kubernetes cluster just use the predefined deployment with service config [`kubernetes.headless-vnc.example.deployment.yaml`](kubernetes.headless-vnc.example.deployment.yaml): 
 
